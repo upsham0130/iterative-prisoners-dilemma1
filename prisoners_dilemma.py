@@ -266,7 +266,7 @@ def make_section1(modules, scores):
     # Last line
     section1 += 'TOTAL  :'
     for index in range(len(modules)):
-        section1 += '{:>7}'.format(sum(scores[index]))     
+        section1 += '{:>7}'.format(sum([int(float(i)) for i in scores[index]]))
     return section1+'\n'
     
 def make_section2(modules, scores):
